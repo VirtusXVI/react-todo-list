@@ -1,0 +1,43 @@
+.app-surface{
+    background-color: #242424;
+    box-shadow: 4px 12px 24px rgba(0, 0, 0, 0.25);
+    width: 70%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 25px;
+    padding: 2rem 0;
+}
+.todo-list{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.single-item{
+    width: 70%;
+    padding: 5px 0;
+}
+ul{
+    list-style-type: none;
+    width: 70%;
+    margin: 0 auto;
+}
+li{
+    margin: 1rem 0;
+}
+img{
+    width: 20px;
+    height: 20px;
+}
+h1{
+    text-align: center;
+    margin: 1rem 0;
+}
+.bin{
+    margin-right: 1rem;
+}
+.checkbox{
+    margin-right: 0.5rem;
+}
+.add-button{
+    align-self: center;
+}
