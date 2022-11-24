@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+.app{
+    font-family: 'Inter', sans-serif;
+}
 .app-surface{
     background-color: #242424;
     box-shadow: 4px 12px 24px rgba(0, 0, 0, 0.25);
@@ -7,7 +11,7 @@
     border-radius: 25px;
     padding: 2rem 0;
 }
-.todo-list{ 
+.todo-list div{ 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -20,9 +24,10 @@ ul{
     list-style-type: none;
     width: 70%;
     margin: 0 auto;
+    margin-top: 64px;
 }
 li{
-    margin: 1rem 0;
+    margin-bottom: 40px;
 }
 img{
     width: 20px;
@@ -30,16 +35,46 @@ img{
 }
 h1{
     text-align: center;
+    font-size: 54px;
     margin: 1rem 0;
 }
+label{
+    font-size: 17px;
+}
 .bin{
-    margin-right: 1rem;
+    margin-right: 0.5rem;
 }
 .checkbox{
-    margin-right: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 10px;
 }
 .add-button{
     align-self: center;
+    color: white;
+}
+.add-button button{
+    align-self: center;
+    color: #242424;
+    background-color: #716FB2;
+    padding: 16px 32px;
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+}
+.add-button button img{
+    margin-right: 24px;
+}
+.add-button span{
+    font-size: 20px;
+    color: white;
+}
+.input{
+    width: 20%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+.add{
+    font-size: 40px;
 }
 .show{
     text-decoration: line-through;

@@ -3,6 +3,7 @@ import '../assets/css/style.css'
 import Bin from '../assets/img/Bin.svg'
 import CheckboxOff from '../assets/img/Checkbox_Off.svg'
 import CheckboxOn from '../assets/img/Checkbox_On.svg'
+import Add from '../assets/img/Adds.svg'
 
 function App() {
     let [show, setShow] = useState(false)
@@ -22,16 +23,16 @@ function App() {
                             { todoItems() }
                         </ul>
                         <div className='add-button'>
-                            <button onClick={visibleAdd}>ADD</button>
+                            <button onClick={visibleAdd}><img className='add' src={ Add } alt="add" /><span>ADD</span></button>
                         </div>
                     </div>
                 }
                 {
                 add ? 
                     <div>
-                        <input type="text" onChange={e => setNewtodo(e.target.value)}/>
+                        <input className='input' type="text" onChange={e => setNewtodo(e.target.value)}/>
                         <div className='add-button'>
-                            <button onClick={addToArray}>ADD</button>
+                            <button onClick={addToArray}><img className='add' src={ Add } alt="add" /> <span>ADD</span></button>
                         </div>
                     </div> 
                 : ''
@@ -43,7 +44,7 @@ function App() {
         return todoList.map((todo,index) => (
             <li key={todo.id}>
                 <img className='bin' onClick={() => setTodoList(todoList.filter(a => a.id !== todo.id))} src={ Bin } alt="Bin" />
-                <img src={ changeImage(index) } onClick={(e) => changeStatus(index)} alt="" />
+                <img className='checkbox' src={ changeImage(index) } onClick={(e) => changeStatus(index)} alt="" />
                 <span className={`${todo.done ? 'show' : ''}`}>{todo.name}</span>
             </li>
         ));
