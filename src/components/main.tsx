@@ -6,7 +6,6 @@ import CheckboxOn from '../assets/img/Checkbox_On.svg'
 import Add from '../assets/img/Adds.svg'
 
 function App() {
-    let [show, setShow] = useState(false)
     let [newID, setNewID] = useState(0);
     let [todoList,setTodoList] = useState([{'id': 0, 'name':'Andare al Supermercato', 'done': false}]);
     const [add, setAdd] = useState(false);
