@@ -11,29 +11,33 @@ function App() {
     const [add, setAdd] = useState(false);
     const [newtodo, setNewtodo] = useState('');
     return (
-        <div className='app-surface'>
+        <div>
             <div className='todo-list'>
                 {
                 add ? 
                     '' : 
                     <div>
-                        <h1>TODO LIST</h1>
-                        <ul>
-                            { todoItems() }
-                        </ul>
+                        <div className='app-surface'>
+                            <h1>TODO</h1>
+                            <ul>
+                                { todoItems() }
+                            </ul>
+                        </div>
                         <div className='add-button'>
-                            <button onClick={visibleAdd}><img className='add' src={ Add } alt="add" /><span>ADD</span></button>
+                            <button onClick={visibleAdd}><img className='add' src={ Add } alt="add" /><span>Nuova Voce</span></button>
                         </div>
                     </div>
                 }
                 {
                 add ? 
-                    <div>
-                        <input className='input' type="text" onChange={e => setNewtodo(e.target.value)}/>
-                        <div className='add-button'>
-                            <button onClick={addToArray}><img className='add' src={ Add } alt="add" /> <span>ADD</span></button>
-                        </div>
-                    </div> 
+                    <div className='add-section'>
+                        <div className='save'>
+                            <input className='input' type="text" onChange={e => setNewtodo(e.target.value)}/>
+                            <div className='add-button'>
+                                <button onClick={addToArray}> <span>Salva</span></button>
+                            </div>
+                        </div> 
+                    </div>
                 : ''
                 }
             </div>
