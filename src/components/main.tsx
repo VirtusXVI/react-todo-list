@@ -13,21 +13,17 @@ function App() {
     return (
         <div>
             <div className='todo-list'>
-                {
-                add ? 
-                    '' : 
-                    <div>
-                        <div className='app-surface'>
-                            <h1>TODO</h1>
-                            <ul>
-                                { todoItems() }
-                            </ul>
-                        </div>
-                        <div className='add-button'>
-                            <button onClick={visibleAdd}><img className='add' src={ Add } alt="add" /><span>Nuova Voce</span></button>
-                        </div>
+                <div>
+                    <div className='app-surface'>
+                        <h1>TODO</h1>
+                        <ul>
+                            { todoItems() }
+                        </ul>
                     </div>
-                }
+                    <div className='add-button'>
+                        <button onClick={visibleAdd}><img className='add' src={ Add } alt="add" /><span>Nuova Voce</span></button>
+                    </div>
+                </div>
                 {
                 add ? 
                     <div className='add-section'>
